@@ -9,7 +9,9 @@ async function main() {
       console.log(`Example app listening on port ${config.db_url}`);
     });
   } catch (error) {
-    console.log(error)
+    console.log(error);
   }
 }
+
+main();
 // mongodb://localhost:27017
