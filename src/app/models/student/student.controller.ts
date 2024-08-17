@@ -6,12 +6,12 @@ const createStudent = async (req: Request, res: Response) => {
   try {
     // creating a schema validation using zod
     const { student: studentData } = req.body;
-    
+
     // data validation using joi
     // const { error, value } = studentValidationSchema.validate(studentData);
     // const result = await StudentServices.createStudentIntoDB(studentData);
-    
-    const zodParsedData = studentValidationSchema.parse(studentData)
+
+    const zodParsedData = studentValidationSchema.parse(studentData);
     const result = await StudentServices.createStudentIntoDB(zodParsedData);
 
     // if (error) {
